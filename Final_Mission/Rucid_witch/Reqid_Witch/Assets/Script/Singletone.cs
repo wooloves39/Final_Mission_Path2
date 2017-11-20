@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.IO;
 public class Singletone
 {
     private static Singletone instance = null;
@@ -25,6 +25,20 @@ public class Singletone
     public int Mapnumber = -1;
     public int Charnumber = -1;
 	public float Sound = -1;
+    public string name;
+    public int stage;
+    public string saveTime;
+    public void Load(StreamReader sr)
+    {
+        string stage_str;
+        name = sr.ReadLine();
+        stage_str = sr.ReadLine();
+       int.TryParse(stage_str,out stage);
+        saveTime = sr.ReadLine();
+        Debug.Log(name);
+        Debug.Log( stage);
+        Debug.Log(saveTime);
+    }
     //사용 예
     //  int myPlayernumber = Singletone.Instance.Charnumber - 1;
     //  Singletone.Instance.Charnumber = choice;

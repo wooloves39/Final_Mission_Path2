@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System.IO;
 public class Menu : MonoBehaviour {
 
 	//UI 스타일 - 텍스트 박스
@@ -48,7 +48,15 @@ public class Menu : MonoBehaviour {
 		audioSource = FindObjectOfType<AudioSource> ();
 		audioSource.volume = UIOptionSound;
 		Singletone.Instance.Sound = UIOptionSound;
-	}
+        string FilePath = Application.dataPath + "/save1.txt";
+        FileStream fs = new FileStream(FilePath, FileMode.Create);
+        StreamWriter sw = new StreamWriter(fs);
+        sw.Write("Reqid_Witch");
+        sw.Write("4");
+        sw.Write(System.DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss"));
+        sw.Close();
+        fs.Close();
+    }
     void OnGUI()
     {
         if (!Title) {
@@ -74,6 +82,10 @@ public class Menu : MonoBehaviour {
 				GUI.Box(new Rect(Screen.width / 2 - UINameWidth/2, Screen.height / 2 - UILoadHeight / 2 - UINameHeight/2, UINameWidth, UINameHeight), "\n이어하기");
                 if (GUI.Button(new Rect(Screen.width / 2 - (UILoadWidth / 2) - UILoadWidth - UILoadSpace, Screen.height / 2 - UILoadHeight / 2 + 45, UILoadWidth, UILoadHeight), "이어하기 1")) {
                     //다음 씬으로 넘어감
+                    string FilePath = Application.dataPath + "/save1.txt";
+                    FileStream fs = new FileStream(FilePath, FileMode.Open);
+                    StreamReader sr = new StreamReader(fs);
+                    Singletone.Instance.Load(sr);
                     SceneManager.LoadScene("next Scene");
                     num = 2;
                 }
