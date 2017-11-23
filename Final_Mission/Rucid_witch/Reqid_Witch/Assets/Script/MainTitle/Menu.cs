@@ -51,9 +51,9 @@ public class Menu : MonoBehaviour {
         string FilePath = Application.dataPath + "/save1.txt";
         FileStream fs = new FileStream(FilePath, FileMode.Create);
         StreamWriter sw = new StreamWriter(fs);
-        sw.Write("Reqid_Witch");
-        sw.Write("4");
-        sw.Write(System.DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss"));
+        sw.WriteLine("Reqid_Witch");
+        sw.WriteLine("4");
+        sw.WriteLine(System.DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss"));
         sw.Close();
         fs.Close();
     }
