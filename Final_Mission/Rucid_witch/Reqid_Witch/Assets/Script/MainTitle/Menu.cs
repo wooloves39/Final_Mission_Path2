@@ -9,6 +9,10 @@ public class Menu : MonoBehaviour {
 	public GUIStyle TextBox;
 	//UI 스타일 - 버튼 박스
 	public GUIStyle Button;
+	public GUIStyle Load;
+	public GUIStyle Background;
+	public GUIStyle UITitle;
+	public GUIStyle Back;
 
 	//뒷 배경 크기
 	public int UIMenuTitleWidht = 512;
@@ -61,26 +65,26 @@ public class Menu : MonoBehaviour {
     {
         if (!Title) {
             if (num != 0)
-                GUI.Box(new Rect(Screen.width / 2 - UIMenuTitleWidht / 2, Screen.height / 2 - UIMenuTitleHeight / 2, UIMenuTitleWidht, UIMenuTitleHeight), "");
+                GUI.Box(new Rect(Screen.width / 2 - UIMenuTitleWidht / 2, Screen.height / 2 - UIMenuTitleHeight / 2, UIMenuTitleWidht, UIMenuTitleHeight), "",Background);
             if (num == 1) {
-                if (GUI.Button(new Rect(Screen.width / 2 - (UIWidth / 2), Screen.height / 2 - ((UIHeight + UISpace) * 3 / 2) - (UIHeight / 2), UIWidth, UIHeight), "새로시작")) {
+				if (GUI.Button(new Rect(Screen.width / 2 - (UIWidth / 2), Screen.height / 2 - ((UIHeight + UISpace) * 3 / 2) - (UIHeight / 2), UIWidth, UIHeight), "새로시작",Button)) {
                     //다음 씬으로 넘어감
                     SceneManager.LoadScene("next Scene");
                     num = 2;
                 }
-                if (GUI.Button(new Rect(Screen.width / 2 - (UIWidth / 2), Screen.height / 2 - ((UIHeight + UISpace) / 2) - (UIHeight / 2), UIWidth, UIHeight), "이어하기")) {
+				if (GUI.Button(new Rect(Screen.width / 2 - (UIWidth / 2), Screen.height / 2 - ((UIHeight + UISpace) / 2) - (UIHeight / 2), UIWidth, UIHeight), "이어하기",Button)) {
                     num = 3;
                 }
-                if (GUI.Button(new Rect(Screen.width / 2 - (UIWidth / 2), Screen.height / 2 + ((UIHeight + UISpace) / 2) - (UIHeight / 2), UIWidth, UIHeight), "멀티플레이")) {
+				if (GUI.Button(new Rect(Screen.width / 2 - (UIWidth / 2), Screen.height / 2 + ((UIHeight + UISpace) / 2) - (UIHeight / 2), UIWidth, UIHeight), "멀티플레이",Button)) {
                     //num = 4;
                 }
-                if (GUI.Button(new Rect(Screen.width / 2 - (UIWidth / 2), Screen.height / 2 + ((UIHeight + UISpace) * 3 / 2) - (UIHeight / 2), UIWidth, UIHeight), "옵션")) {
+				if (GUI.Button(new Rect(Screen.width / 2 - (UIWidth / 2), Screen.height / 2 + ((UIHeight + UISpace) * 3 / 2) - (UIHeight / 2), UIWidth, UIHeight), "옵션",Button)) {
                     num = 5;
                 }
             }
             if (num == 3) {
-				GUI.Box(new Rect(Screen.width / 2 - UINameWidth/2, Screen.height / 2 - UILoadHeight / 2 - UINameHeight/2, UINameWidth, UINameHeight), "\n이어하기");
-                if (GUI.Button(new Rect(Screen.width / 2 - (UILoadWidth / 2) - UILoadWidth - UILoadSpace, Screen.height / 2 - UILoadHeight / 2 + 45, UILoadWidth, UILoadHeight), "이어하기 1")) {
+				GUI.Box(new Rect(Screen.width / 2 - UINameWidth/2, Screen.height / 2 - UILoadHeight / 2 - UINameHeight/2, UINameWidth, UINameHeight), "이어하기",UITitle);
+                if (GUI.Button(new Rect(Screen.width / 2 - (UILoadWidth / 2) - UILoadWidth - UILoadSpace, Screen.height / 2 - UILoadHeight / 2 + 45, UILoadWidth, UILoadHeight), "이어하기 1",Load)) {
                     //다음 씬으로 넘어감
                     string FilePath = Application.dataPath + "/save1.txt";
                     FileStream fs = new FileStream(FilePath, FileMode.Open);
@@ -89,30 +93,28 @@ public class Menu : MonoBehaviour {
                     SceneManager.LoadScene("next Scene");
                     num = 2;
                 }
-                if (GUI.Button(new Rect(Screen.width / 2 - (UILoadWidth / 2), Screen.height / 2 - UILoadHeight / 2 + 45, UILoadWidth, UILoadHeight), "이어하기 2")) {
+				if (GUI.Button(new Rect(Screen.width / 2 - (UILoadWidth / 2), Screen.height / 2 - UILoadHeight / 2 + 45, UILoadWidth, UILoadHeight), "이어하기 2",Load)) {
                     //다음 씬으로 넘어감
                     SceneManager.LoadScene("next Scene");
                     num = 2;
                 }
-                if (GUI.Button(new Rect(Screen.width / 2 - (UILoadWidth / 2) + UILoadWidth + UILoadSpace, Screen.height / 2 - UILoadHeight / 2 + 45, UILoadWidth, UILoadHeight), "이어하기 3")) {
+				if (GUI.Button(new Rect(Screen.width / 2 - (UILoadWidth / 2) + UILoadWidth + UILoadSpace, Screen.height / 2 - UILoadHeight / 2 + 45, UILoadWidth, UILoadHeight), "이어하기 3",Load)) {
                     //다음 씬으로 넘어감
                     SceneManager.LoadScene("next Scene");
                     num = 2;
                 }
-                if (GUI.Button(new Rect(Screen.width - 80, Screen.height - 40, 80, 40), "이전단계")) {
+				if (GUI.Button(new Rect(Screen.width / 2 - 50, Screen.height / 2 - UIMenuTitleHeight / 2, 100, 40), "이전단계",Back)) {
                     num = 1;
                 }
             }
 			if (num == 5) {
-                GUI.Box(new Rect(Screen.width / 2 - UIOptionWidth / 2, Screen.height / 2 - UIOptionHeight / 2 - (UIOptionHeight * 3 / 2) - UIOptionSpace, UIOptionWidth, UIOptionHeight), "\n설정");
-
-              	GUI.Box(new Rect(Screen.width / 2 - UIOptionWidth / 2, Screen.height / 2 - UIOptionHeight, UIOptionWidth, 260), "");
+				GUI.Box(new Rect(Screen.width / 2 - UIOptionWidth / 2, Screen.height / 2 - UIOptionHeight / 2 - (UIOptionHeight * 3 / 2) - UIOptionSpace, UIOptionWidth, UIOptionHeight), "설정",UITitle);
 				GUI.Box(new Rect(Screen.width / 2 - UIOptionWidth / 2 + UIOptionSpace, Screen.height / 2 - UIOptionHeight / 2 - (UIOptionHeight / 2) + UIOptionSpace, UIOptionWidth - UIOptionSpace * 2, UIOptionHeight), "사운드", TextBox);
 
 				UIOptionSound = GUI.HorizontalSlider(new Rect(Screen.width / 2 - UIOptionWidth / 2 + UIOptionSpace, Screen.height / 2 - UIOptionHeight / 2 - (UIOptionHeight / 2) + UIOptionSpace * 2, UIOptionWidth - UIOptionSpace * 2, UIOptionHeight), UIOptionSound, 0, 1);
 				Singletone.Instance.Sound = UIOptionSound;
 				audioSource.volume = UIOptionSound;
-                if (GUI.Button(new Rect(Screen.width - 80, Screen.height - 40, 80, 40), "적용하기")) {
+				if (GUI.Button(new Rect(Screen.width / 2-50, Screen.height / 2 - UIMenuTitleHeight / 2 , 100, 40), "이전단계",Back))  {
                     num = 1;
                 }
             }
