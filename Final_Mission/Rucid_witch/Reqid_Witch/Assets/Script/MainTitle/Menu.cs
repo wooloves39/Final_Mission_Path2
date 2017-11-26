@@ -39,6 +39,9 @@ public class Menu : MonoBehaviour {
 	public int UIOptionHeight = 70;
 	public int UIOptionSpace = 20;
 
+	public int UIBackWidth = 100;
+	public int UIBackHeight = 40;
+
 	//메뉴 1 = 처음화면
 	//메뉴 2 = 처음하기
 	//메뉴 3 = 이어하기
@@ -103,7 +106,7 @@ public class Menu : MonoBehaviour {
                     SceneManager.LoadScene("next Scene");
                     num = 2;
                 }
-				if (GUI.Button(new Rect(Screen.width / 2 - 50, Screen.height / 2 - UIMenuTitleHeight / 2, 100, 40), "이전단계",Back)) {
+				if (GUI.Button(new Rect(Screen.width / 2 - UIBackWidth/2, Screen.height / 2 + UIMenuTitleHeight / 2-UIBackHeight, UIBackWidth, UIBackHeight), "이전단계",Back)) {
                     num = 1;
                 }
             }
@@ -114,7 +117,7 @@ public class Menu : MonoBehaviour {
 				UIOptionSound = GUI.HorizontalSlider(new Rect(Screen.width / 2 - UIOptionWidth / 2 + UIOptionSpace, Screen.height / 2 - UIOptionHeight / 2 - (UIOptionHeight / 2) + UIOptionSpace * 2, UIOptionWidth - UIOptionSpace * 2, UIOptionHeight), UIOptionSound, 0, 1);
 				Singletone.Instance.Sound = UIOptionSound;
 				audioSource.volume = UIOptionSound;
-				if (GUI.Button(new Rect(Screen.width / 2-50, Screen.height / 2 - UIMenuTitleHeight / 2 , 100, 40), "이전단계",Back))  {
+				if (GUI.Button(new Rect(Screen.width / 2-UIBackWidth/2, Screen.height / 2 + UIMenuTitleHeight / 2-UIBackHeight , UIBackWidth, UIBackHeight), "이전단계",Back))  {
                     num = 1;
                 }
             }
