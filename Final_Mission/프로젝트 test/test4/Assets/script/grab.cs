@@ -14,7 +14,6 @@ public class grab : MonoBehaviour {
     {
         grabbing = true;
         RaycastHit[] hits;
-
         hits = Physics.SphereCastAll(transform.position, grabRadius, transform.forward, 0f, grabMask);
         if (hits.Length > 0)
         {
