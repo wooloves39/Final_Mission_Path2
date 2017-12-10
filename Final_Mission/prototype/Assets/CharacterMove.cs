@@ -30,8 +30,7 @@ public class CharacterMove : MonoBehaviour {
 	// 현재 이동 속도.
 	Vector3 velocity = Vector3.zero; 
 	// 캐릭터 컨트롤러의 캐시.
-	CharacterController characterController; 
-	// 도착했는가(도착했다 true / 도착하지 않았다 false).
+
 	public bool arrived = false; 
 	
 	// 방향을 강제로 지시하는가.
@@ -51,13 +50,19 @@ public class CharacterMove : MonoBehaviour {
 	public float rotationSpeed = 360.0f;
 
 	public Vector3 playerPosit = Vector3.zero;
-
 	private Vector3 moveDirection = Vector3.zero;
+
+	//이동할 방향
+	Vector3 Movement = Vector3.zero;
+	//컴포넌트를 받을 값
 	MouseLook mouseLook;
+	CharacterController characterController;
+	Rigidbody rigi;
 	
 	// Use this for initialization
 	void Start () {
-		characterController = GetComponent<CharacterController>();
+		characterController = GetComponent<CharacterController> ();
+		rigi = GetComponent<Rigidbody>();
 		destination = transform.position;
 
 	}
@@ -65,24 +70,32 @@ public class CharacterMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//카메라 방향 만큼 회전
+		float h = Input.GetAxisRaw("Horizontal");
+		float v = Input.GetAxisRaw("Vertical");
 		mouseLook = FindObjectOfType<MouseLook>();
-		this.transform.Rotate( new Vector3 (0.0f, mouseLook.transform.rotation.y, 0.0f));
-
+		
 		//4방향으로 움직임
 		if (Input.GetKey (KeyCode.A)) {
-			characterController.Move (transform.TransformDirection (Vector3.left)   * WalkSpeed * Time.deltaTime );
+			Movement.Set (h, 0, v);	
+			Movement = Vector3.left * WalkSpeed * Time.deltaTime;
+			rigi.MovePosition (transform.position + Movement);
 		}
 		if (Input.GetKey (KeyCode.W)) {
-			characterController.Move (transform.TransformDirection (Vector3.forward )* WalkSpeed * Time.deltaTime );
+			Movement.Set (h, 0, v);	
+			Movement = Vector3.forward* WalkSpeed * Time.deltaTime;
+			rigi.MovePosition (transform.position + Movement);
 		}
 		if (Input.GetKey (KeyCode.S)) {
-			characterController.Move (transform.TransformDirection (Vector3.forward )* -BackWalkSpeed * Time.deltaTime );
+			Movement.Set (h, 0, v);	
+			Movement = Vector3.forward* -BackWalkSpeed * Time.deltaTime;
+			rigi.MovePosition (transform.position + Movement);
 		}
 		if (Input.GetKey (KeyCode.D)) {
-			characterController.Move (transform.TransformDirection (Vector3.right ) * WalkSpeed * Time.deltaTime );
+			Movement.Set (h, 0, v);	
+			Movement = Vector3.right* WalkSpeed * Time.deltaTime;
+			rigi.MovePosition (transform.position + Movement);
+			
 		}
-
-
 
 		//플레이어 포지션을 받아둔다. 
 		playerPosit = this.transform.position;
