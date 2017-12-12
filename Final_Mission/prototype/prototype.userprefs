@@ -1,8 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CharacterMove.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Taget.cs">
     <Files>
-      <File FileName="Assets\CharacterMove.cs" Line="69" Column="45" />
+      <File FileName="Assets\CharacterMove.cs" Line="80" Column="15" />
+      <File FileName="Assets\MouseLook.cs" Line="15" Column="9" />
+      <File FileName="Assets\Taget.cs" Line="22" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
