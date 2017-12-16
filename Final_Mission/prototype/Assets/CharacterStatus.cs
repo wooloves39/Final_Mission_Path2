@@ -9,7 +9,7 @@ public class CharacterStatus : MonoBehaviour {
 	public Vector3 position;
 	bool Hit = false;
 	Attack attack;
-	void Start()
+	void Update()
 	{
 		position = transform.position;
 	}
