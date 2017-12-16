@@ -26,12 +26,10 @@ public class Taget : MonoBehaviour {
 	//충돌을 벗어나면 초기화
 	void OnTriggerExit(Collider other)
 	{
-		print ("taget exit");
 		HP = 0;
 		MaxHP = 0;
 		CharacterName = null;
 		characterStatus = null;
-
 	}
 
 }

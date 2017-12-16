@@ -59,6 +59,7 @@
      <Compile Include="Assets\InputManager.cs" />
      <Compile Include="Assets\Menu.cs" />
      <Compile Include="Assets\MouseLook.cs" />
+     <Compile Include="Assets\Move.cs" />
      <Compile Include="Assets\Singletone.cs" />
      <Compile Include="Assets\Taget.cs" />
      <Compile Include="Assets\TitleScene.cs" />

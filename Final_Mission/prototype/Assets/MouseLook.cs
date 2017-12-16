@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MouseLook : MonoBehaviour {
-
+	
     public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
     public RotationAxes axes = RotationAxes.MouseXAndY;
     public float sensitivityX = 15F;
@@ -13,11 +13,12 @@ public class MouseLook : MonoBehaviour {
     public float minimumY = -60F;
     public float maximumY = 60F;
 	public float rotationY = 0F;
+	public float rotationX = 0F;
     void Update()
     {
         if (axes == RotationAxes.MouseXAndY)
         {
-            float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
+            rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
 
             rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
             rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);

@@ -23,7 +23,7 @@ using System.Collections;
 //
 public class CharacterMove : MonoBehaviour {
 	// 중력값.
-	const float GravityPower = 9.8f; 
+	const float GravityPower = 0.0f; 
 	//　목적지에 도착했다고 보는 정지 거리.
 	const float StoppingDistance = 0.6f;
 	
@@ -78,22 +78,22 @@ public class CharacterMove : MonoBehaviour {
 		if (Input.GetKey (KeyCode.A)) {
 			Movement.Set (h, 0, v);	
 			Movement = Vector3.left * WalkSpeed * Time.deltaTime;
-			rigi.MovePosition (transform.position + Movement);
+			destination =(transform.position + Movement);
 		}
 		if (Input.GetKey (KeyCode.W)) {
 			Movement.Set (h, 0, v);	
 			Movement = Vector3.forward* WalkSpeed * Time.deltaTime;
-			rigi.MovePosition (transform.position + Movement);
+			destination =(transform.position + Movement);
 		}
 		if (Input.GetKey (KeyCode.S)) {
 			Movement.Set (h, 0, v);	
 			Movement = Vector3.forward* -BackWalkSpeed * Time.deltaTime;
-			rigi.MovePosition (transform.position + Movement);
+			destination =(transform.position + Movement);
 		}
 		if (Input.GetKey (KeyCode.D)) {
 			Movement.Set (h, 0, v);	
 			Movement = Vector3.right* WalkSpeed * Time.deltaTime;
-			rigi.MovePosition (transform.position + Movement);
+			destination =(transform.position + Movement);
 			
 		}
 
