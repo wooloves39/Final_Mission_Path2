@@ -10,7 +10,6 @@ public class Attack :  MonoBehaviour  {
 	public Vector3 prevposition;
 	public Vector3 moveposition;
 	CharacterStatus characterStatus;
-	CharacterStatus tagetStatus;
 	Taget taget;
 	public GameObject GetTaget;
 	// Update is called once per frame
@@ -32,15 +31,15 @@ public class Attack :  MonoBehaviour  {
 			// 타겟으로 발사
 			transform.LookAt (moveposition);
 			transform.Translate (Vector3.forward * MagicSpeed * Time.deltaTime);
-			if (Vector3.Distance (this.transform.position, moveposition) < 2.0f) {
-				attack = false;
-				transform.position = new Vector3(0,-500,0);
+			if (Vector3.Distance (this.transform.position, moveposition) < 0.25f) {
+				Hit ();
 			}
 		}
 	}
-	void OnTriggerEnter(Collider other)
+	void OnTriggerStay(Collider other)
 	{
-		if (other.tag == "Enemy" || other.tag == "Ground") 
+		print ("hit");
+		if (other.tag == "Enemy") 
 		{
 			Hit ();
 			characterStatus = other.GetComponent<CharacterStatus> ();

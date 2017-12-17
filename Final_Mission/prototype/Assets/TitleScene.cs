@@ -22,7 +22,7 @@ public class TitleScene : MonoBehaviour
     }
     void Start()
     {
-        object_Color = Title.transform.GetComponent<MeshRenderer>().material.color;
+       // object_Color = Title.transform.GetComponent<MeshRenderer>().material.color;
 
         Vector3 scale=Title.transform.localScale;
         Title.gameObject.transform.localScale=new Vector3(scale.x*Screen_width*25/48*0.005f, scale.y*Screen_height * 25/48*0.005f,1);

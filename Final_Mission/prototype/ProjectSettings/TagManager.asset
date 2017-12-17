@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Ground
+  - PlayerSkill
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - PlayerHit
   - EnemyAtt
   - EnemyHit
-  - 
+  - taget
   - 
   - 
   - 

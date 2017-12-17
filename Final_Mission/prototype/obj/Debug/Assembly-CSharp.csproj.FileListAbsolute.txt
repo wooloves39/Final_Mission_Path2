@@ -1,4 +1,3 @@
-C:\Users\cdcd8\OneDrive\문서\GitHub\Final_Mission_Path2\Final_Mission\prototype\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\cdcd8\OneDrive\문서\GitHub\Final_Mission_Path2\Final_Mission\prototype\Temp\bin\Debug\Assembly-CSharp.dll
 C:\Users\cdcd8\OneDrive\문서\GitHub\Final_Mission_Path2\Final_Mission\prototype\Temp\bin\Debug\Assembly-CSharp.pdb
 C:\Users\cdcd8\OneDrive\문서\GitHub\Final_Mission_Path2\Final_Mission\prototype\Temp\bin\Debug\nunit.framework.dll
@@ -28,5 +27,6 @@ C:\Users\cdcd8\OneDrive\문서\GitHub\Final_Mission_Path2\Final_Mission\prototyp
 C:\Users\cdcd8\OneDrive\문서\GitHub\Final_Mission_Path2\Final_Mission\prototype\Temp\bin\Debug\UnityEngine.Timeline.xml
 C:\Users\cdcd8\OneDrive\문서\GitHub\Final_Mission_Path2\Final_Mission\prototype\Temp\bin\Debug\UnityEngine.Analytics.xml
 C:\Users\cdcd8\OneDrive\문서\GitHub\Final_Mission_Path2\Final_Mission\prototype\Temp\bin\Debug\UnityEngine.HoloLens.xml
+C:\Users\cdcd8\OneDrive\문서\GitHub\Final_Mission_Path2\Final_Mission\prototype\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\cdcd8\OneDrive\문서\GitHub\Final_Mission_Path2\Final_Mission\prototype\obj\Debug\Assembly-CSharp.dll
 C:\Users\cdcd8\OneDrive\문서\GitHub\Final_Mission_Path2\Final_Mission\prototype\obj\Debug\Assembly-CSharp.pdb

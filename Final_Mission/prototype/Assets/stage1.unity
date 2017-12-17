@@ -117,12 +117,12 @@ GameObject:
   m_Component:
   - component: {fileID: 262017442}
   - component: {fileID: 262017441}
-  - component: {fileID: 262017440}
   - component: {fileID: 262017439}
+  - component: {fileID: 262017440}
   - component: {fileID: 262017438}
   m_Layer: 9
   m_Name: Magic2
-  m_TagString: Untagged
+  m_TagString: PlayerSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,7 +169,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &262017440
 MonoBehaviour:
@@ -498,8 +498,8 @@ GameObject:
   m_Component:
   - component: {fileID: 838492567}
   - component: {fileID: 838492566}
-  - component: {fileID: 838492565}
   - component: {fileID: 838492564}
+  - component: {fileID: 838492565}
   - component: {fileID: 838492563}
   m_Layer: 9
   m_Name: Magic5
@@ -507,7 +507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &838492563
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -550,7 +550,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.75
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &838492565
 MonoBehaviour:
@@ -633,7 +633,7 @@ MeshRenderer:
   m_GameObject: {fileID: 956373431}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -699,7 +699,7 @@ GameObject:
   - component: {fileID: 1072109090}
   - component: {fileID: 1072109091}
   - component: {fileID: 1072109092}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Taget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -980,8 +980,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1234040645}
   - component: {fileID: 1234040649}
-  - component: {fileID: 1234040646}
   - component: {fileID: 1234040648}
+  - component: {fileID: 1234040646}
   - component: {fileID: 1234040647}
   m_Layer: 9
   m_Name: Magic1
@@ -989,7 +989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1234040645
 Transform:
   m_ObjectHideFlags: 0
@@ -1063,7 +1063,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.75
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1234040649
 MeshFilter:
@@ -1160,8 +1160,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1678651782}
   - component: {fileID: 1678651781}
-  - component: {fileID: 1678651780}
   - component: {fileID: 1678651779}
+  - component: {fileID: 1678651780}
   - component: {fileID: 1678651778}
   m_Layer: 9
   m_Name: Magic3
@@ -1169,7 +1169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1678651778
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1212,7 +1212,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.75
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1678651780
 MonoBehaviour:
@@ -1261,8 +1261,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1840946785}
   - component: {fileID: 1840946784}
-  - component: {fileID: 1840946783}
   - component: {fileID: 1840946782}
+  - component: {fileID: 1840946783}
   - component: {fileID: 1840946781}
   m_Layer: 9
   m_Name: Magic4
@@ -1270,7 +1270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1840946781
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1313,7 +1313,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.75
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1840946783
 MonoBehaviour:

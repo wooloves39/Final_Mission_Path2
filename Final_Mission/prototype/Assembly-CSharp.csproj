@@ -61,6 +61,7 @@
      <Compile Include="Assets\Singletone.cs" />
      <Compile Include="Assets\Taget.cs" />
      <Compile Include="Assets\TitleScene.cs" />
+     <None Include="Assets\save1.txt" />
      <None Include="Assets\360 model\Insideout.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

@@ -72,7 +72,7 @@ public class Menu : MonoBehaviour {
             if (num == 1) {
 				if (GUI.Button(new Rect(Screen.width / 2 - (UIWidth / 2), Screen.height / 2 - ((UIHeight + UISpace) * 3 / 2) - (UIHeight / 2), UIWidth, UIHeight), "새로시작",Button)) {
                     //다음 씬으로 넘어감
-                    SceneManager.LoadScene("next Scene");
+                    SceneManager.LoadScene("stage1");
                     num = 2;
                 }
 				if (GUI.Button(new Rect(Screen.width / 2 - (UIWidth / 2), Screen.height / 2 - ((UIHeight + UISpace) / 2) - (UIHeight / 2), UIWidth, UIHeight), "이어하기",Button)) {
@@ -92,18 +92,18 @@ public class Menu : MonoBehaviour {
                     string FilePath = Application.dataPath + "/save1.txt";
                     FileStream fs = new FileStream(FilePath, FileMode.Open);
                     StreamReader sr = new StreamReader(fs);
-                    Singletone.Instance.Load(sr);
-                    SceneManager.LoadScene("next Scene");
+					Singletone.Instance.Load(sr);
+					SceneManager.LoadScene("stage1");
                     num = 2;
                 }
 				if (GUI.Button(new Rect(Screen.width / 2 - (UILoadWidth / 2), Screen.height / 2 - UILoadHeight / 2 + 45, UILoadWidth, UILoadHeight), "이어하기 2",Load)) {
-                    //다음 씬으로 넘어감
-                    SceneManager.LoadScene("next Scene");
+					//다음 씬으로 넘어감
+					SceneManager.LoadScene("stage1");
                     num = 2;
                 }
 				if (GUI.Button(new Rect(Screen.width / 2 - (UILoadWidth / 2) + UILoadWidth + UILoadSpace, Screen.height / 2 - UILoadHeight / 2 + 45, UILoadWidth, UILoadHeight), "이어하기 3",Load)) {
-                    //다음 씬으로 넘어감
-                    SceneManager.LoadScene("next Scene");
+					//다음 씬으로 넘어감
+					SceneManager.LoadScene("stage1");
                     num = 2;
                 }
 				if (GUI.Button(new Rect(Screen.width / 2 - UIBackWidth/2, Screen.height / 2 + UIMenuTitleHeight / 2-UIBackHeight, UIBackWidth, UIBackHeight), "이전단계",Back)) {
