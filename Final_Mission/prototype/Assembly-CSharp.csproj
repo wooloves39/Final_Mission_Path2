@@ -52,13 +52,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Attack.cs" />
+     <Compile Include="Assets\boxcheck.cs" />
      <Compile Include="Assets\CharacterStatus.cs" />
      <Compile Include="Assets\CorrectionSound.cs" />
      <Compile Include="Assets\FollowCamera.cs" />
+     <Compile Include="Assets\input.cs" />
      <Compile Include="Assets\Menu.cs" />
      <Compile Include="Assets\MouseLook.cs" />
      <Compile Include="Assets\Move.cs" />
      <Compile Include="Assets\Singletone.cs" />
+     <Compile Include="Assets\skilcontroller.cs" />
      <Compile Include="Assets\Taget.cs" />
      <Compile Include="Assets\TitleScene.cs" />
      <None Include="Assets\save1.txt" />
