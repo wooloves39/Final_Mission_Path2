@@ -37,7 +37,8 @@ public class input : MonoBehaviour
         {
             //skill 오브젝트를 좌표에 맞게 생성한다.
             Vector3 pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
-            skill= Instantiate(skillcontroller, pos, Quaternion.identity, this.transform);
+            pos.z += 5;
+            skill = Instantiate(skillcontroller, pos, transform.localRotation);
            
         }
         //마우스를 땟을때, 스킬이 발동했는지 확인한다.
@@ -59,14 +60,17 @@ public class input : MonoBehaviour
             timer = 0;
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit[] hit = Physics.SphereCastAll(ray, 1.0f);
+            RaycastHit[] hit = Physics.SphereCastAll(ray, 0.1f);
             for (int i = 0; i < hit.Length; ++i)
             {//맞은 인덱스값을 스킬 오브젝트에 넘겨준다.
-                if (!hit[i].collider.gameObject.GetComponent<boxcheck>().Getcheck())
+                if (hit[i].collider.gameObject.CompareTag("point")) 
                 {
-                   Debug.Log("터치터치팡팡");
-                    skill.GetComponent<skilcontroller>().rec_in(hit[i].collider.GetComponent<boxcheck>().Get_index(), hit[i].collider.gameObject);
-                   
+                    if (!hit[i].collider.gameObject.GetComponent<boxcheck>().Getcheck())
+                    {
+                        Debug.Log("터치터치팡팡");
+                        skill.GetComponent<skilcontroller>().rec_in(hit[i].collider.GetComponent<boxcheck>().Get_index(), hit[i].collider.gameObject);
+
+                    }
                 }
             }
         }
