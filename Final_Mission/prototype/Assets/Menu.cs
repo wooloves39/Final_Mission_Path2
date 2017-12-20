@@ -13,6 +13,7 @@ public class Menu : MonoBehaviour {
 	public GUIStyle Background;
 	public GUIStyle UITitle;
 	public GUIStyle Back;
+	public GUIStyle SELECT;
 
 	//뒷 배경 크기
 	public int UIMenuTitleWidht = 512;
@@ -48,6 +49,7 @@ public class Menu : MonoBehaviour {
 	//메뉴 4 = 멀티플레이
 	//메뉴 5 = 옵션
 	public int num = 1;
+	int keynum = 0;
 	public GameObject Title;
 	public AudioSource audioSource;
 	void Start()
@@ -64,9 +66,35 @@ public class Menu : MonoBehaviour {
         sw.Close();
         fs.Close();
     }
+	void Update()
+	{
+		if (keynum == 0) {
+			if (Input.GetKeyUp (KeyCode.S)) {
+				keynum=1;
+			}
+		} 
+		else {
+			if (Input.GetKeyUp (KeyCode.W)) {
+				if (keynum != 1)
+					keynum--;
+			}
+			if (Input.GetKeyUp (KeyCode.S)) {
+				if(keynum!=4)
+					keynum++;
+			}
+			if (Input.GetKeyUp (KeyCode.Space)) {
+				num = keynum+1;
+				if(num == 2)
+					SceneManager.LoadScene("stage1");
+			}
+		}
+
+	}
     void OnGUI()
     {
-        if (!Title) {
+        if (!Title) 
+		{
+
             if (num != 0)
                 GUI.Box(new Rect(Screen.width / 2 - UIMenuTitleWidht / 2, Screen.height / 2 - UIMenuTitleHeight / 2, UIMenuTitleWidht, UIMenuTitleHeight), "",Background);
             if (num == 1) {
@@ -74,17 +102,29 @@ public class Menu : MonoBehaviour {
                     //다음 씬으로 넘어감
                     SceneManager.LoadScene("stage1");
                     num = 2;
+					keynum = 0;
                 }
 				if (GUI.Button(new Rect(Screen.width / 2 - (UIWidth / 2), Screen.height / 2 - ((UIHeight + UISpace) / 2) - (UIHeight / 2), UIWidth, UIHeight), "이어하기",Button)) {
                     num = 3;
+					keynum = 0;
                 }
 				if (GUI.Button(new Rect(Screen.width / 2 - (UIWidth / 2), Screen.height / 2 + ((UIHeight + UISpace) / 2) - (UIHeight / 2), UIWidth, UIHeight), "멀티플레이",Button)) {
                     //num = 4;
+					keynum = 0;
                 }
 				if (GUI.Button(new Rect(Screen.width / 2 - (UIWidth / 2), Screen.height / 2 + ((UIHeight + UISpace) * 3 / 2) - (UIHeight / 2), UIWidth, UIHeight), "옵션",Button)) {
-                    num = 5;
+					num = 5;
+					keynum = 0;
                 }
-            }
+				if (keynum == 1)
+					GUI.Box (new Rect (Screen.width / 2 - (UIWidth / 2), Screen.height / 2 - ((UIHeight + UISpace) * 3 / 2) - (UIHeight / 2), UIWidth+10, UIHeight+5), "", SELECT);
+				if (keynum == 2)
+					GUI.Box (new Rect (Screen.width / 2 - (UIWidth / 2), Screen.height / 2 - ((UIHeight + UISpace) / 2) - (UIHeight / 2), UIWidth+10, UIHeight+5), "", SELECT);
+				if (keynum == 3)
+					GUI.Box(new Rect(Screen.width / 2 - (UIWidth / 2), Screen.height / 2 + ((UIHeight + UISpace) / 2) - (UIHeight / 2), UIWidth+10, UIHeight+5), "", SELECT);
+				if (keynum == 4)
+					GUI.Box(new Rect(Screen.width / 2 - (UIWidth / 2), Screen.height / 2 + ((UIHeight + UISpace) * 3 / 2) - (UIHeight / 2), UIWidth+10, UIHeight+5), "", SELECT);
+			}
             if (num == 3) {
 				GUI.Box(new Rect(Screen.width / 2 - UINameWidth/2, Screen.height / 2 - UILoadHeight / 2 - UINameHeight/2, UINameWidth, UINameHeight), "이어하기",UITitle);
                 if (GUI.Button(new Rect(Screen.width / 2 - (UILoadWidth / 2) - UILoadWidth - UILoadSpace, Screen.height / 2 - UILoadHeight / 2 + 45, UILoadWidth, UILoadHeight), "이어하기 1",Load)) {
@@ -121,5 +161,6 @@ public class Menu : MonoBehaviour {
                     num = 1;
                 }
             }
-        } }
+        } 
+	}
 }
