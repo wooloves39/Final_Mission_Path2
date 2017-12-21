@@ -7,6 +7,7 @@ public class Attack :  MonoBehaviour  {
 	public float MagicSpeed = 50.0f;
 	public float Range = 20.0f;
 	public int Power = 10;
+	public int mynum = 0;
 	public Vector3 prevposition;
 	public Vector3 moveposition;
 	CharacterStatus characterStatus;
@@ -17,7 +18,7 @@ public class Attack :  MonoBehaviour  {
 	}
 	void Update () {
 		//마우스 오른쪽 버튼을 누르면 시작 + bool 함수 attack
-		if (Input.GetButtonDown ("Fire2")&& !attack) 
+		if (Input.GetButtonDown ("Fire2")&& !attack && (Singletone.Instance.skill[Singletone.Instance.setskill]==mynum)) 
 		{
 			attack = true;
 			taget = GetTaget.GetComponent<Taget> ();

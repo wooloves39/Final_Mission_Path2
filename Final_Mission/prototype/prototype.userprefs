@@ -1,18 +1,21 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\input.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SkillInput.cs">
     <Files>
       <File FileName="Assets\MouseLook.cs" Line="1" Column="1" />
       <File FileName="Assets\Taget.cs" Line="1" Column="1" />
       <File FileName="Assets\CharacterStatus.cs" Line="1" Column="1" />
-      <File FileName="Assets\Move.cs" Line="1" Column="1" />
+      <File FileName="Assets\Move.cs" Line="6" Column="32" />
       <File FileName="Assets\FollowCamera.cs" Line="1" Column="1" />
-      <File FileName="Assets\Attack.cs" Line="1" Column="1" />
-      <File FileName="Assets\Singletone.cs" Line="1" Column="1" />
+      <File FileName="Assets\Attack.cs" Line="23" Column="18" />
+      <File FileName="Assets\Singletone.cs" Line="29" Column="25" />
       <File FileName="Assets\TitleScene.cs" Line="1" Column="1" />
-      <File FileName="Assets\Menu.cs" Line="1" Column="1" />
-      <File FileName="Assets\skilcontroller.cs" Line="17" Column="1" />
-      <File FileName="Assets\input.cs" Line="65" Column="1" />
+      <File FileName="Assets\Menu.cs" Line="102" Column="33" />
+      <File FileName="Assets\skilcontroller.cs" Line="68" Column="1" />
+      <File FileName="Assets\input.cs" Line="1" Column="1" />
+      <File FileName="Assets\boxcheck.cs" Line="1" Column="1" />
+      <File FileName="Assets\Ready.cs" Line="28" Column="48" />
+      <File FileName="Assets\SkillInput.cs" Line="25" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
