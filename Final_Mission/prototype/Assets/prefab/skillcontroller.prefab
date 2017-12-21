@@ -39,7 +39,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -30.000002, z: 0}
 --- !u!114 &114444833330724014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -51,4 +51,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2084dde128ad2e4690b05327638dbdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxes: {fileID: 1382573381910536, guid: b096f383c9e20a345ae82b999527a7b4, type: 2}
+  boxes: {fileID: 1382573381910536, guid: d247114b78a03e44d8ce70b4f6021557, type: 2}

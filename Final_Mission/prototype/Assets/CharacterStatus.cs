@@ -6,9 +6,14 @@ public class CharacterStatus : MonoBehaviour {
 	public int HP = 100;
 	public int MaxHP = 100;
 	public int Power = 10;
+	public float size;
 	public Vector3 position;
 	bool Hit = false;
 	Attack attack;
+	void Start()
+	{
+		size = transform.localScale.y;
+	}
 	void Update()
 	{
 		position = transform.position;

@@ -10,8 +10,9 @@ public class skilcontroller : MonoBehaviour {
     private int start = 0;
     // Use this for initialization
     void Start () {
-        //모든 오브젝트를 미리 셋팅한다.
-        Vector3 pos = this.transform.position;
+		//MouseLook cam = FindObjectOfType<MouseLook> ();
+		//모든 오브젝트를 미리 셋팅한다.
+		Vector3 pos = this.transform.position;
         //첫점
         box_point[0] = Instantiate(boxes, pos, boxes.transform.rotation, this.transform);
         box_point[0].GetComponent<boxcheck>().Set_index(0);

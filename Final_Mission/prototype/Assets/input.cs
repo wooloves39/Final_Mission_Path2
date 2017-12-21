@@ -7,7 +7,7 @@ public class input : MonoBehaviour
     public GameObject skillcontroller;
     private float timer = 0;
     private GameObject skill;
-
+	public Vector3 pos;
     private bool skillon;
   private float skill_timer;
     // Use this for initialization
@@ -34,14 +34,15 @@ public class input : MonoBehaviour
         }
         //마우스 클릭시
         if (Input.GetMouseButtonDown(0))
-        {
+		{
             //skill 오브젝트를 좌표에 맞게 생성한다.
-            Vector3 pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+           pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
             pos.z += 5;
-            skill = Instantiate(skillcontroller, pos, transform.localRotation);
+			skill = Instantiate (skillcontroller, pos, transform.localRotation);
+			//skill.transform.parent = this.transform;
            
         }
-        //마우스를 땟을때, 스킬이 발동했는지 확인한다.
+        //마우스를 땟을때, 스킬이 발동했는지 확인한다.		
         if (Input.GetMouseButtonUp(0))
         {
             if (skill)
@@ -56,9 +57,9 @@ public class input : MonoBehaviour
         }
         //마우스의 움직임을 0.2초 당 한번씩 레이캐스트를 통해 체크한다.
         if (Input.GetMouseButton(0) && timer > 0.2f)
-        {
+		{	
             timer = 0;
-            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hit = Physics.SphereCastAll(ray, 0.1f);
             for (int i = 0; i < hit.Length; ++i)

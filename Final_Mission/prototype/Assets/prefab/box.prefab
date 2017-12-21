@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114868737997503846}
   m_Layer: 0
   m_Name: box
-  m_TagString: point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,11 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-<<<<<<< HEAD
-  - {fileID: 2100000, guid: 3a50c7fd148fd214a8c50aaaf022fa2d, type: 2}
-=======
   - {fileID: 2100000, guid: 89074df46af358e4787318a10accb9ae, type: 2}
->>>>>>> ff918d8c508904d500675e30a3862b497806537c
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
