@@ -61,6 +61,7 @@
      <Compile Include="Assets\MouseLook.cs" />
      <Compile Include="Assets\Move.cs" />
      <Compile Include="Assets\Ready.cs" />
+     <Compile Include="Assets\RotationText.cs" />
      <Compile Include="Assets\Singletone.cs" />
      <Compile Include="Assets\skilcontroller.cs" />
      <Compile Include="Assets\SkillInput.cs" />
