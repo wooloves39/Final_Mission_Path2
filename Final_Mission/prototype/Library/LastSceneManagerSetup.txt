@@ -1,16 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Title_Scene.unity
-  isLoaded: 1
-  isActive: 1
-- path: Assets/stage1.unity
-  isLoaded: 0
-  isActive: 0
-- path: Assets/ready.unity
-  isLoaded: 0
-  isActive: 0
-=======
 - path: Assets/ready.unity
   isLoaded: 1
   isActive: 1
->>>>>>> 2b0f405ce5c9847b1e25f855fbc8876a1c9c0462

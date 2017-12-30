@@ -8,7 +8,6 @@ public class RotationText : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		time = 0.0f;
-		text = GetComponent<RectTransform> ();
 	}
 	
 	// Update is called once per frame
@@ -17,7 +16,7 @@ public class RotationText : MonoBehaviour {
 		if (time > 0.1f) {
 			time = 0.0f;
 			Debug.Log (1);
-			text.Rotate (new Vector3 (3, 0, 0));
+			this.transform.Rotate(new Vector3(0,6,0));
 		}
 	}
 }

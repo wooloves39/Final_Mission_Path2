@@ -16,7 +16,7 @@
       <File FileName="Assets\boxcheck.cs" Line="1" Column="1" />
       <File FileName="Assets\Ready.cs" Line="1" Column="1" />
       <File FileName="Assets\SkillInput.cs" Line="1" Column="1" />
-      <File FileName="Assets\RotationText.cs" Line="20" Column="30" />
+      <File FileName="Assets\RotationText.cs" Line="19" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
