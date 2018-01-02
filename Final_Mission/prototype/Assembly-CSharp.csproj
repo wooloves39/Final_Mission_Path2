@@ -64,6 +64,8 @@
      <Compile Include="Assets\RotationText.cs" />
      <Compile Include="Assets\Singletone.cs" />
      <Compile Include="Assets\skilcontroller.cs" />
+     <Compile Include="Assets\Skill1_1.cs" />
+     <Compile Include="Assets\Skill2_1.cs" />
      <Compile Include="Assets\SkillInput.cs" />
      <Compile Include="Assets\Taget.cs" />
      <Compile Include="Assets\TitleScene.cs" />
