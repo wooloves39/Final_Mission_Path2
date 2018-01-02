@@ -47,13 +47,7 @@ public class input_mouse : MonoBehaviour
         //마우스를 땟을때, 스킬이 발동했는지 확인한다.
         if (Input.GetMouseButtonUp(0))
         {
-            if (Skills[mytype].getTimerOn() == false)
-            {
-                Skills[mytype].PointRestart();
-                Skills[mytype].reset();
-                Skills[mytype].gameObject.SetActive(false);
-           
-            }
+            Skills[mytype].SkillOn();
         }
         //마우스의 움직임을 0.2초 당 한번씩 레이캐스트를 통해 체크한다.
         if (Input.GetMouseButton(0) && timer > 0.2f)
@@ -68,16 +62,10 @@ public class input_mouse : MonoBehaviour
                     if (!hit[i].collider.gameObject.GetComponent<PointCheck>().Getcheck())
                     {
                         hit[i].collider.gameObject.GetComponent<PointCheck>().touchon();
-                        ++Skills[mytype].count;
-                        Debug.Log(Skills[mytype].count);
-                        Skills[mytype].MyPoint = hit[i].collider.gameObject.GetComponent<PointCheck>();
-                    } }
-                //맞은 인덱스값을 스킬 오브젝트에 넘겨준다.
-                //if (!hit[i].collider.gameObject.GetComponent<boxcheck>().Getcheck())
-                //{
-                //    Debug.Log("터치터치팡팡");
-
-                //}
+                        Skills[mytype].UpCount();
+                        Skills[mytype].TouchPoint(hit[i].collider.gameObject.GetComponent<PointCheck>());
+                    }
+                }
             }
         }
     }

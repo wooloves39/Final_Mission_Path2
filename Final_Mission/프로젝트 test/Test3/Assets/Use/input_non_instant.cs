@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class input_non_instant : MonoBehaviour
 {
-    public PointCheck MainPoint;
+    private PointCheck MainPoint;
     public PointCheck[] Points;
-    public PointCheck MyPoint;
+    private PointCheck MyPoint;
     //현제 포인트 수
-    public int count;
+    private int count;
     //각 스킬 순서
     public int[] skill1;
     public int[] skill2;
     public int[] skill3;
     public int[] skill4;
     public int[] skill5;
-
+    private int[] touchPoints;
     //완료 타이머
     private bool TimerOn;
     private float completeTimer;
@@ -25,7 +25,17 @@ public class input_non_instant : MonoBehaviour
     {
         reset();
     }
-    public bool getTimerOn(){ return TimerOn; }
+    private void Awake()
+    {
+        MainPoint = Points[0];
+        touchPoints = new int[skill5.Length];
+    }
+    public bool getTimerOn() { return TimerOn; }
+    public int UpCount()
+    {
+        ++count;
+        return count;
+    }
     public void reset()
     {
         MainPoint.turnon();
@@ -33,13 +43,36 @@ public class input_non_instant : MonoBehaviour
         MyPoint = MainPoint;
         completeTimer = 0.0f;
         TimerOn = false;
-        
+        for (int i = 0; i < touchPoints.Length; ++i)
+        {
+            touchPoints[i] = 0;
+        }
     }
     public void PointRestart()
     {
         for (int i = 0; i < Points.Length; ++i)
         {
             Points[i].reset();
+        }
+    }
+    public void TouchPoint(PointCheck touchPoint)
+    {
+        MyPoint = touchPoint;
+        if (count >= 0)
+        {
+            for (int i = 0; i < Points.Length; ++i)
+            {
+                if (MyPoint == Points[i])
+                {
+                    if (touchPoints != null)
+                    {
+                        touchPoints[count] = i;
+                        Debug.Log("터치포인트");
+                        Debug.Log(touchPoints[count]);
+                    }
+                    break;
+                }
+            }
         }
     }
     private void SkillTime()
@@ -54,7 +87,7 @@ public class input_non_instant : MonoBehaviour
                 Complete.SetActive(false);
                 reset();
                 gameObject.SetActive(false);
-                
+
             }
         }
     }
@@ -65,17 +98,24 @@ public class input_non_instant : MonoBehaviour
             Points[i].turnoff();
         }
     }
-    private void SkillChecks(int[] skill,int index)
+    private void PointCheck(int[] skill)
     {
+
         if (skill.Length >= count + 1)
+        {
+            for(int i = 0; i < count; ++i)
+            {
+                if (skill[i] != touchPoints[i])
+                    return;
+            }
             if (Points[skill[count]] == MyPoint)
             {
                 if (skill.Length == count + 1)
                 {
-                    Debug.Log(index);
-                    Debug.Log("마법 발동!!");
-                    Complete.SetActive(true);
-                    TimerOn = true;
+                    for (int i = 0; i <= count; ++i)
+                    {
+                        Points[skill[i]].turnon();
+                    }
                 }
                 else
                 {
@@ -84,26 +124,86 @@ public class input_non_instant : MonoBehaviour
                         Points[skill[i]].turnon();
                     }
                 }
-
             }
+        }
     }
-    private void SkillCheck()
+    private void PointChecks()
     {
         if (count >= 0)
         {
             PointReset();
-            SkillChecks(skill1,1);
-            SkillChecks(skill2,2);
-            SkillChecks(skill3,3);
-            SkillChecks(skill4,4);
-            SkillChecks(skill5,5);
-           
+            PointCheck(skill1);
+            PointCheck(skill2);
+            PointCheck(skill3);
+            PointCheck(skill4);
+            PointCheck(skill5);
+
         }
+    }
+    private bool SkillCheck(int[] skill)
+    {
+        if (skill.Length == count + 1)
+        {
+            for (int i = 0; i <= count; ++i)
+            {
+                if (skill[i] != touchPoints[i])
+                    return false;
+            }
+            return true;
+        }
+        return false;
+
+    }
+    public void SkillOn()
+    {
+        if (SkillCheck(skill1))
+        {
+            Debug.Log(1);
+            Debug.Log("마법 발동!!"); TimerOn = true;
+            Complete.SetActive(true);
+            return;
+        }
+        else if (SkillCheck(skill2))
+        {
+            Debug.Log(2);
+            Debug.Log("마법 발동!!");
+            TimerOn = true;
+            Complete.SetActive(true);
+            return;
+        }
+        else if (SkillCheck(skill3))
+        {
+            Debug.Log(3);
+            Debug.Log("마법 발동!!");
+            TimerOn = true;
+            Complete.SetActive(true);
+            return;
+        }
+        else if (SkillCheck(skill4))
+        {
+            Debug.Log(4);
+            Debug.Log("마법 발동!!");
+            TimerOn = true;
+            Complete.SetActive(true);
+            return;
+        }
+        else if (SkillCheck(skill5))
+        {
+            Debug.Log(5);
+            Debug.Log("마법 발동!!"); TimerOn = true;
+            Complete.SetActive(true);
+            return;
+        }
+
+        PointRestart();
+        TimerOn = false;
+        reset();
+        gameObject.SetActive(false);
     }
     // Update is called once per frame
     void Update()
     {
         SkillTime();
-        SkillCheck();
+        PointChecks();
     }
 }
