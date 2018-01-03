@@ -60,6 +60,7 @@
      <Compile Include="Assets\Menu.cs" />
      <Compile Include="Assets\MouseLook.cs" />
      <Compile Include="Assets\Move.cs" />
+     <Compile Include="Assets\movetest.cs" />
      <Compile Include="Assets\Ready.cs" />
      <Compile Include="Assets\RotationText.cs" />
      <Compile Include="Assets\Singletone.cs" />
@@ -69,6 +70,7 @@
      <Compile Include="Assets\SkillInput.cs" />
      <Compile Include="Assets\Taget.cs" />
      <Compile Include="Assets\TitleScene.cs" />
+     <Compile Include="Assets\Tower.cs" />
      <None Include="Assets\save1.txt" />
      <None Include="Assets\360 model\Insideout.shader" />
  <Reference Include="UnityEngine.UI">

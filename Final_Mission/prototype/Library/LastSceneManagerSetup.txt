@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Hyun/test skill complete.unity
+=======
+- path: Assets/test.unity
+>>>>>>> b00d82c50fe0971db66dea97ecec4876a07a8a79
   isLoaded: 1
   isActive: 1
