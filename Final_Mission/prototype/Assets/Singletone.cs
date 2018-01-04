@@ -25,7 +25,8 @@ public class Singletone
     public int Mapnumber = -1;
     public int Charnumber = -1;
 	public float Sound = -1;
-	public int[] skill= {0,1,2};
+	public int[] skill= {-1,-1,-1};
+    public int La_skill = 0;
 	public int setskill= 0;
     public string name;
     public int stage;
