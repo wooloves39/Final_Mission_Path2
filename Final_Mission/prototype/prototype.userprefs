@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\movetest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\test\shot.cs">
     <Files>
       <File FileName="Assets\MouseLook.cs" Line="1" Column="1" />
-      <File FileName="Assets\Taget.cs" Line="21" Column="20" />
+      <File FileName="Assets\Taget.cs" Line="1" Column="1" />
       <File FileName="Assets\CharacterStatus.cs" Line="1" Column="1" />
       <File FileName="Assets\Move.cs" Line="1" Column="1" />
       <File FileName="Assets\FollowCamera.cs" Line="1" Column="1" />
@@ -17,10 +17,12 @@
       <File FileName="Assets\Ready.cs" Line="1" Column="1" />
       <File FileName="Assets\SkillInput.cs" Line="1" Column="1" />
       <File FileName="Assets\RotationText.cs" Line="1" Column="1" />
-      <File FileName="Assets\Skill2_1.cs" Line="48" Column="61" />
-      <File FileName="Assets\Tower.cs" Line="8" Column="17" />
-      <File FileName="Assets\movetest.cs" Line="16" Column="46" />
-      <File FileName="Assets\Skill1_1.cs" Line="58" Column="46" />
+      <File FileName="Assets\Skill2_1.cs" Line="1" Column="1" />
+      <File FileName="Assets\Skill1_1.cs" Line="1" Column="1" />
+      <File FileName="Assets\test\BuildTower.cs" Line="1" Column="1" />
+      <File FileName="Assets\test\movetest.cs" Line="1" Column="1" />
+      <File FileName="Assets\test\Tower.cs" Line="33" Column="44" />
+      <File FileName="Assets\test\shot.cs" Line="16" Column="68" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
