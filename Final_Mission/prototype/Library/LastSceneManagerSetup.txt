@@ -1,12 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/test/test.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Hyun/test skill complete.unity
-=======
-- path: Assets/test.unity
->>>>>>> b00d82c50fe0971db66dea97ecec4876a07a8a79
->>>>>>> adb2a1c2342c0baab0d4e4518dfb3018f0782237
+- path: Assets/Dialog_Scene.unity
   isLoaded: 1
   isActive: 1
