@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class movetest : MonoBehaviour {
 	public GameObject[] next;
+	public string enemy;
 	int i = 0 ;
 	// Use this for initialization
 	void Start () {

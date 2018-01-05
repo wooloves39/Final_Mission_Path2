@@ -4,14 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class RotationText : MonoBehaviour
 {
-    float time;
     RectTransform text;
     int choice;
     // Use this for initialization
     void Start()
     {
-        time = 0.0f;
-        choice = 0;
+       choice = 0;
     }
     void KeyState()
     {

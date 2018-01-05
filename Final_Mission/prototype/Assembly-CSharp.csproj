@@ -54,8 +54,12 @@
      <Compile Include="Assets\Attack.cs" />
      <Compile Include="Assets\boxcheck.cs" />
      <Compile Include="Assets\CharacterStatus.cs" />
+     <Compile Include="Assets\ChoiceSkill_index.cs" />
      <Compile Include="Assets\CorrectionSound.cs" />
      <Compile Include="Assets\FollowCamera.cs" />
+     <Compile Include="Assets\Hyun\Use\input_mouse.cs" />
+     <Compile Include="Assets\Hyun\Use\input_non_instant.cs" />
+     <Compile Include="Assets\Hyun\Use\PointCheck.cs" />
      <Compile Include="Assets\input.cs" />
      <Compile Include="Assets\Menu.cs" />
      <Compile Include="Assets\MouseLook.cs" />
@@ -71,6 +75,8 @@
      <Compile Include="Assets\test\BuildTower.cs" />
      <Compile Include="Assets\test\movetest.cs" />
      <Compile Include="Assets\test\shot.cs" />
+     <Compile Include="Assets\test\TileMap.cs" />
+     <Compile Include="Assets\test\TileMapMouse.cs" />
      <Compile Include="Assets\test\Tower.cs" />
      <Compile Include="Assets\TitleScene.cs" />
      <None Include="Assets\save1.txt" />
