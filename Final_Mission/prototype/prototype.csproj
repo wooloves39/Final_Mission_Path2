@@ -78,12 +78,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="prototype.Plugins.csproj">
+      <Project>{4C5FFF9B-13CA-C933-D4B9-511774411564}</Project>
+      <Name>prototype.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Attack.cs" />
     <Compile Include="Assets\boxcheck.cs" />
     <Compile Include="Assets\CharacterStatus.cs" />
     <Compile Include="Assets\ChoiceSkill_index.cs" />
     <Compile Include="Assets\CorrectionSound.cs" />
     <Compile Include="Assets\FollowCamera.cs" />
+    <Compile Include="Assets\Hyun\Use\Dialog.cs" />
     <Compile Include="Assets\Hyun\Use\input_mouse.cs" />
     <Compile Include="Assets\Hyun\Use\input_non_instant.cs" />
     <Compile Include="Assets\Hyun\Use\PointCheck.cs" />
@@ -99,10 +106,15 @@
     <Compile Include="Assets\Skill2_1.cs" />
     <Compile Include="Assets\SkillInput.cs" />
     <Compile Include="Assets\Taget.cs" />
+    <Compile Include="Assets\test\BuildTower.cs" />
+    <Compile Include="Assets\test\movetest.cs" />
+    <Compile Include="Assets\test\shot.cs" />
+    <Compile Include="Assets\test\Tower.cs" />
     <Compile Include="Assets\TitleScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\360 model\Insideout.shader" />
+    <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
     <None Include="Assets\save1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
