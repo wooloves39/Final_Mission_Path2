@@ -93,7 +93,11 @@
     <Compile Include="Assets\Hyun\Use\Dialog.cs" />
     <Compile Include="Assets\Hyun\Use\input_mouse.cs" />
     <Compile Include="Assets\Hyun\Use\input_non_instant.cs" />
+    <Compile Include="Assets\Hyun\Use\moveBy.cs" />
+    <Compile Include="Assets\Hyun\Use\moveFrom.cs" />
+    <Compile Include="Assets\Hyun\Use\moveTo.cs" />
     <Compile Include="Assets\Hyun\Use\PointCheck.cs" />
+    <Compile Include="Assets\Hyun\Use\TweenCtrl.cs" />
     <Compile Include="Assets\input.cs" />
     <Compile Include="Assets\Menu.cs" />
     <Compile Include="Assets\MouseLook.cs" />
@@ -109,11 +113,14 @@
     <Compile Include="Assets\test\BuildTower.cs" />
     <Compile Include="Assets\test\movetest.cs" />
     <Compile Include="Assets\test\shot.cs" />
+    <Compile Include="Assets\test\TileMap.cs" />
+    <Compile Include="Assets\test\TileMapMouse.cs" />
     <Compile Include="Assets\test\Tower.cs" />
     <Compile Include="Assets\TitleScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\360 model\Insideout.shader" />
+    <None Include="Assets\Hyun\The_Texture_Lab\TL_Prototype_Textures_Pack\Documentation.txt" />
     <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
     <None Include="Assets\save1.txt" />
   </ItemGroup>
