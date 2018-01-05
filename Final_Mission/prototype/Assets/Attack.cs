@@ -39,7 +39,6 @@ public class Attack :  MonoBehaviour  {
 	}
 	void OnTriggerStay(Collider other)
 	{
-		print ("hit");
 		if (other.tag == "Enemy") 
 		{
 			Hit ();

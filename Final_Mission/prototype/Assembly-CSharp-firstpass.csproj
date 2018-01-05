@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{93FDA6B2-70C3-C7E3-00B8-3BA81DB5C15A}</ProjectGuid>
+    <ProjectGuid>{7E8191F4-349B-F156-2951-2A6803C2945B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>Assets</BaseDirectory>
@@ -51,39 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Attack.cs" />
-     <Compile Include="Assets\boxcheck.cs" />
-     <Compile Include="Assets\CharacterStatus.cs" />
-     <Compile Include="Assets\ChoiceSkill_index.cs" />
-     <Compile Include="Assets\CorrectionSound.cs" />
-     <Compile Include="Assets\FollowCamera.cs" />
-     <Compile Include="Assets\Hyun\Use\Dialog.cs" />
-     <Compile Include="Assets\Hyun\Use\input_mouse.cs" />
-     <Compile Include="Assets\Hyun\Use\input_non_instant.cs" />
-     <Compile Include="Assets\Hyun\Use\PointCheck.cs" />
-     <Compile Include="Assets\input.cs" />
-     <Compile Include="Assets\Menu.cs" />
-     <Compile Include="Assets\MobAttack.cs" />
-     <Compile Include="Assets\MobSearch.cs" />
-     <Compile Include="Assets\MonsterAI.cs" />
-     <Compile Include="Assets\MouseLook.cs" />
-     <Compile Include="Assets\Move.cs" />
-     <Compile Include="Assets\MyRandom.cs" />
-     <Compile Include="Assets\Ready.cs" />
-     <Compile Include="Assets\RotationText.cs" />
-     <Compile Include="Assets\Singletone.cs" />
-     <Compile Include="Assets\skilcontroller.cs" />
-     <Compile Include="Assets\Skill1_1.cs" />
-     <Compile Include="Assets\Skill2_1.cs" />
-     <Compile Include="Assets\SkillInput.cs" />
-     <Compile Include="Assets\Taget.cs" />
-     <Compile Include="Assets\test\BuildTower.cs" />
-     <Compile Include="Assets\test\movetest.cs" />
-     <Compile Include="Assets\test\shot.cs" />
-     <Compile Include="Assets\test\TileMap.cs" />
-     <Compile Include="Assets\test\TileMapMouse.cs" />
-     <Compile Include="Assets\test\Tower.cs" />
-     <Compile Include="Assets\TitleScene.cs" />
+     <Compile Include="Assets\Plugins\Pixelplacement\iTween\iTween.cs" />
+     <Compile Include="Assets\Plugins\Pixelplacement\iTween\Sample\MoveSample.cs" />
+     <Compile Include="Assets\Plugins\Pixelplacement\iTween\Sample\RotateSample.cs" />
+     <Compile Include="Assets\Plugins\Pixelplacement\iTween\Sample\SampleInfo.cs" />
      <None Include="Assets\save1.txt" />
      <None Include="Assets\360 model\Insideout.shader" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
@@ -108,10 +79,6 @@
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{7E8191F4-349B-F156-2951-2A6803C2945B}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
