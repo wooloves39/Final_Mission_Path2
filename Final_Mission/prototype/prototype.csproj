@@ -100,8 +100,12 @@
     <Compile Include="Assets\Hyun\Use\TweenCtrl.cs" />
     <Compile Include="Assets\input.cs" />
     <Compile Include="Assets\Menu.cs" />
+    <Compile Include="Assets\MobAttack.cs" />
+    <Compile Include="Assets\MobSearch.cs" />
+    <Compile Include="Assets\MonsterAI.cs" />
     <Compile Include="Assets\MouseLook.cs" />
     <Compile Include="Assets\Move.cs" />
+    <Compile Include="Assets\MyRandom.cs" />
     <Compile Include="Assets\Ready.cs" />
     <Compile Include="Assets\RotationText.cs" />
     <Compile Include="Assets\Singletone.cs" />
