@@ -58,6 +58,7 @@
      <None Include="Assets\save1.txt" />
      <None Include="Assets\360 model\Insideout.shader" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\Hyun\The_Texture_Lab\TL_Prototype_Textures_Pack\Documentation.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

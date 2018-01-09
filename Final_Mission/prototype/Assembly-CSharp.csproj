@@ -60,7 +60,11 @@
      <Compile Include="Assets\Hyun\Use\Dialog.cs" />
      <Compile Include="Assets\Hyun\Use\input_mouse.cs" />
      <Compile Include="Assets\Hyun\Use\input_non_instant.cs" />
+     <Compile Include="Assets\Hyun\Use\moveBy.cs" />
+     <Compile Include="Assets\Hyun\Use\moveFrom.cs" />
+     <Compile Include="Assets\Hyun\Use\moveTo.cs" />
      <Compile Include="Assets\Hyun\Use\PointCheck.cs" />
+     <Compile Include="Assets\Hyun\Use\TweenCtrl.cs" />
      <Compile Include="Assets\input.cs" />
      <Compile Include="Assets\Menu.cs" />
      <Compile Include="Assets\MobAttack.cs" />
@@ -78,6 +82,9 @@
      <Compile Include="Assets\SkillInput.cs" />
      <Compile Include="Assets\Taget.cs" />
      <Compile Include="Assets\test\BuildTower.cs" />
+     <Compile Include="Assets\test\elecshot.cs" />
+     <Compile Include="Assets\test\ElecTower1.cs" />
+     <Compile Include="Assets\test\elecTowerCreate.cs" />
      <Compile Include="Assets\test\movetest.cs" />
      <Compile Include="Assets\test\shot.cs" />
      <Compile Include="Assets\test\TileMap.cs" />
@@ -87,6 +94,7 @@
      <None Include="Assets\save1.txt" />
      <None Include="Assets\360 model\Insideout.shader" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\Hyun\The_Texture_Lab\TL_Prototype_Textures_Pack\Documentation.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

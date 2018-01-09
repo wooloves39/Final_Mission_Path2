@@ -21,7 +21,7 @@ public class MobAttack : MonoBehaviour {
 			Destroy (this.gameObject);
 		
 		if (Vector3.Distance (ai.mobSearch.PlayerPos, this.transform.position) < 0.5f) {
-			Debug.Log ("Player Hit");
+			//Debug.Log ("Player Hit");
 			Destroy (this.gameObject);
 		}
 		

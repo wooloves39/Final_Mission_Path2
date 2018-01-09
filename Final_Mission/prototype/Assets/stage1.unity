@@ -550,11 +550,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbe275cb123d3844b777035e09325eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pattern: 01000000020000000100000003000000
   Speed: 3
   MobRange: 15
   Delay_Nomal: 2.5
-  Delay_Skill1: 10
-  Delay_Skill2: 10
+  Delay_Skill1: 3
+  Delay_Skill2: 3
+  Delay_SpecialSkill: 3
+  Skill_HPLimit: 40
   taget: {fileID: 222281186}
   prefab: {fileID: 1778530229969534, guid: d5bb969bab4f0d5448bc84f04b28b310, type: 2}
   mobSearch: {fileID: 0}
@@ -4370,11 +4373,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbe275cb123d3844b777035e09325eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pattern: 01000000020000000100000003000000
   Speed: 3
   MobRange: 15
   Delay_Nomal: 2.5
-  Delay_Skill1: 10
-  Delay_Skill2: 10
+  Delay_Skill1: 3
+  Delay_Skill2: 3
+  Delay_SpecialSkill: 3
+  Skill_HPLimit: 40
   taget: {fileID: 742257756}
   prefab: {fileID: 1778530229969534, guid: d5bb969bab4f0d5448bc84f04b28b310, type: 2}
   mobSearch: {fileID: 0}
@@ -8442,11 +8448,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbe275cb123d3844b777035e09325eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pattern: 01000000020000000100000003000000
   Speed: 3
   MobRange: 15
   Delay_Nomal: 2.5
-  Delay_Skill1: 10
-  Delay_Skill2: 10
+  Delay_Skill1: 3
+  Delay_Skill2: 3
+  Delay_SpecialSkill: 3
+  Skill_HPLimit: 40
   taget: {fileID: 1781439403}
   prefab: {fileID: 1778530229969534, guid: d5bb969bab4f0d5448bc84f04b28b310, type: 2}
   mobSearch: {fileID: 0}

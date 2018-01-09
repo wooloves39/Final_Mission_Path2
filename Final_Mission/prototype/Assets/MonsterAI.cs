@@ -26,7 +26,9 @@ public class MonsterAI : MonoBehaviour {
 //	3 스킬2				//
 //	4 특수스킬			//	특정 상황시 다음 패턴은 반드시 특수스킬
 //	5
-	int[] pattern;
+	public int[] pattern; //1~3// 예시
+	int pattern_num = 0;
+	//1 2 1 3 -> 기본공격 스킬1 기본공격 스킬 2(반복)
 
 	float Stop_Time = 3.0f;
 	float Stop_Motion_Time = 2.0f;
@@ -38,16 +40,20 @@ public class MonsterAI : MonoBehaviour {
 	public float Delay_Nomal = 2.5f;
 	public float Delay_Skill1 = 10.0f;
 	public float Delay_Skill2 = 10.0f;
+	public float Delay_SpecialSkill = 10.0f;
+	public float Skill_HPLimit = 40.0f;//(%)
+	bool special = false;//특수스킬 사용 여부
 
 	int num;
 	Vector3 PosPoint;
 
 	public GameObject taget;
 	public GameObject prefab;
+	CharacterStatus status;
 	public MobSearch mobSearch;
 	void Start () {
 		mobSearch = taget.GetComponent<MobSearch> ();
-	}
+		status = GetComponent<CharacterStatus> ();	}
 
 
 	// Update is called once per frame
@@ -100,18 +106,55 @@ public class MonsterAI : MonoBehaviour {
 			}
 		} 
 		else {
-			//이동
 			time += Time.deltaTime;
+			//이동
 			if (Vector3.Distance (this.transform.position, mobSearch.PlayerPos) > MobRange) {
 				this.transform.LookAt (mobSearch.PlayerPos);
 				this.transform.Translate (Vector3.forward * Time.deltaTime * Speed);
 			} 
 			//공격
 			else {
-				if (time >= Delay_Nomal) {
-					Instantiate (prefab, this.transform.position,this.transform.rotation);
-					time = 0.0f;
+				if(special == false && status.HP / status.MaxHP * 100 < Skill_HPLimit) {
+					if (time >= Delay_SpecialSkill) {
+						//특수 스킬 들어갈 위치
+						special = true;
+						//Instantiate (prefab, this.transform.position, this.transform.rotation);
+						time = 0.0f;
+						Debug.Log ("특수스킬");
+					}
 				}
+				else{
+					if (pattern [pattern_num] == 1) {
+						if (time >= Delay_Nomal) {
+							Instantiate (prefab, this.transform.position, this.transform.rotation);
+							time = 0.0f;
+							pattern_num++;
+							Debug.Log ("기본공격");
+
+						}
+					} else if (pattern [pattern_num] == 2) {
+						if (time >= Delay_Skill1) {
+							//스킬 1 들어갈 위치
+							//Instantiate (prefab, this.transform.position, this.transform.rotation);
+							time = 0.0f;
+							pattern_num++;
+							Debug.Log ("스킬1");
+						}
+					} else if (pattern [pattern_num] == 3) {
+						if (time >= Delay_Skill2) {
+							//스킬 2 들어갈 위치
+							//Instantiate (prefab, this.transform.position, this.transform.rotation);
+							time = 0.0f;
+							pattern_num++;
+
+							Debug.Log ("스킬2");
+						}
+					}
+					if(pattern_num == pattern.Length)
+						//반복
+						pattern_num=0;
+				}
+
 				
 			}
 		}
