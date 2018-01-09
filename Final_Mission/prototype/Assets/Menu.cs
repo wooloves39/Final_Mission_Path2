@@ -92,7 +92,7 @@ public class Menu : MonoBehaviour {
 	}
     void OnGUI()
     {
-        if (!Title) 
+        if (Title.activeSelf==false) 
 		{
 
             if (num != 0)
