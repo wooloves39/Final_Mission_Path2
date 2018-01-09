@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/test/test.unity
-=======
-- path: Assets/Title_Scene.unity
->>>>>>> 15e6d15659789398dd79cfb792be6d0322dab1c4
+- path: Assets/Dialog_Scene.unity
   isLoaded: 1
   isActive: 1

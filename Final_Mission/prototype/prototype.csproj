@@ -115,6 +115,9 @@
     <Compile Include="Assets\SkillInput.cs" />
     <Compile Include="Assets\Taget.cs" />
     <Compile Include="Assets\test\BuildTower.cs" />
+    <Compile Include="Assets\test\elecshot.cs" />
+    <Compile Include="Assets\test\ElecTower1.cs" />
+    <Compile Include="Assets\test\elecTowerCreate.cs" />
     <Compile Include="Assets\test\movetest.cs" />
     <Compile Include="Assets\test\shot.cs" />
     <Compile Include="Assets\test\TileMap.cs" />
