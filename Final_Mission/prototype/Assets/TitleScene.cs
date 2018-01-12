@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class TitleScene : MonoBehaviour
 {
-    public GameObject Title;
+	public GameObject Title;
+	public GameObject UIback;
+	public GameObject UImain;
     Color object_Color;
     float opening_time = 0.0f;
     float Alpha_color = 0.0f;
     float Screen_width;
     float Screen_height;
+	bool check = false;
 
 	private IEnumerator opening;
 	// Use this for initialization
@@ -39,11 +42,16 @@ public class TitleScene : MonoBehaviour
 		opening_time += Time.deltaTime;
 		if (Input.anyKey)
 		{
-			Title.gameObject.SetActive(false);
+			if (check == false) {
+				Title.gameObject.SetActive (false);
+				UIback.gameObject.SetActive (true);
+				UImain.gameObject.SetActive (true);
+				check = true;
+			}
 		}
 		if (Alpha_color == 1.0f)
 		{
-				Debug.Log(Alpha_color);
+			Debug.Log(Alpha_color);
 			StopCoroutine(opening);
 		}
 	}
