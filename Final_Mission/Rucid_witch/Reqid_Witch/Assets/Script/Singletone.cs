@@ -28,6 +28,7 @@ public class Singletone
     public string name;
     public int stage;
     public string saveTime;
+	public int[] skill;
     public void Load(StreamReader sr)
     {
         string stage_str;
