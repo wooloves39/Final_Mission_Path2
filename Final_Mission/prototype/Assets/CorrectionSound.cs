@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CorrectionSound : MonoBehaviour {
-
+	public float Volume = 0.66f;
 	AudioSource audioSource;
 	// Use this for initialization
 	void Start () {
 		audioSource = GetComponent<AudioSource> ();
+		audioSource.volume = Singletone.Instance.Sound;
+	}
+	void ChangeVolume(float v)
+	{
+		Volume = v;
+		Singletone.Instance.Sound = Volume;
 		audioSource.volume = Singletone.Instance.Sound;
 	}
 	void OnLevelWasLoaded()
@@ -20,3 +26,4 @@ public class CorrectionSound : MonoBehaviour {
 		DontDestroyOnLoad (this);
 	}
 }
+
