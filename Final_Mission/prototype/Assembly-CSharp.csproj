@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AIstatus.cs" />
+     <Compile Include="Assets\AITree.cs" />
      <Compile Include="Assets\Attack.cs" />
      <Compile Include="Assets\boxcheck.cs" />
      <Compile Include="Assets\CharacterStatus.cs" />

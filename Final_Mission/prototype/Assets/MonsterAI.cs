@@ -51,9 +51,13 @@ public class MonsterAI : MonoBehaviour {
 	public GameObject prefab;
 	CharacterStatus status;
 	public MobSearch mobSearch;
+
 	void Start () {
 		mobSearch = taget.GetComponent<MobSearch> ();
-		status = GetComponent<CharacterStatus> ();	}
+		status = GetComponent<CharacterStatus> ();	
+
+
+	}
 
 
 	// Update is called once per frame
