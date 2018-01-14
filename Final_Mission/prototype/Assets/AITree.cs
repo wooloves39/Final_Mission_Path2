@@ -37,7 +37,7 @@ public class AITree : MonoBehaviour {
 		Dnum = 23;
 		AIDic.Add(Dnum,new AIstatus(Dnum,"NomalSkill_4"));
 
-		//특수 스킬(상황에 맞는)
+		//조건 부 스킬(상황에 맞는)
 		Dnum = 30;
 		AIDic.Add(Dnum,new AIstatus(Dnum,"SpecialSkill_1"));
 		Dnum = 31;
